@@ -18,29 +18,29 @@ All objects inherit `MDNodeDelegate` protocol.
 
 Following objects inherit `MDBlockDelegate` protocol. 
 
-| markdown    | struct name | 
-|-------------|-------------|
-| `# h1`      | MDHeading1  |
-| `## h2`     | MDHeading2  |
-| `### h3`    | MDHeading3  |
-| `#### h4`   | MDHeading4  |
-| `##### h5`  | MDHeading5  |
-| `###### h6` | MDHeading6  |
-| `- item1`   | MDUnorderedList |
-| `1. item1`  | MDOrderedList |
-| `---`       | MDHorizontalRule |
-| `> text`    | MDBlockQuote |
-| ``` lang<br/>code<br/>``` | MDCodeBlock|
-| else        | MDParagraph |
+| markdown    | class name |  support|
+|-------------|-------------|---------|
+| `# h1`      | MDHeading1  | o|
+| `## h2`     | MDHeading2  | o |
+| `### h3`    | MDHeading3  | o |
+| `#### h4`   | MDHeading4  | o |
+| `##### h5`  | MDHeading5  | o |
+| `###### h6` | MDHeading6  | o |
+| `- item1`   | MDUnorderedList | x |
+| `1. item1`  | MDOrderedList | x |
+| `---`       | MDHorizontalRule | x |
+| `> text`    | MDBlockQuote | x |
+| ``` lang<br/>code<br/>``` | MDCodeBlock| o |
+| else        | MDParagraph | o |
 
 Following objects inherit `MDInlineDelegate` protocol
 
-| markdown | struct name|
-|----------|------------|
-| `**bold**`| MDBold |
-| `*italic*`|MDItalic|
-| `~~strikethrough| MDStrikethrogh|
-| ``code`` | MDInlineCode|
-| `[name](source)` | MDLink|
-|`![name](source)` | MDImage|
-| else | MDText|
+| markdown | class name| support|
+|----------|------------|-------|
+| `**strong**`| MDStrong | o |
+| `*emphasis*`|MDEmphasis| o |
+| `~~strikethrough| MDStrikethrogh| x |
+| ``code`` | MDCodeSpan| o |
+| `[name](source)` | MDLink| o |
+|`![name](source)` | MDImage| o |
+| else | MDText| o |
